@@ -133,7 +133,7 @@ header {
       var(--gradient-color),
       var(--gradient-color)
     ),
-    url(/images/background.jpg);
+    url(./images/background.jpg);
   background-position: 50% 40%;
   background-size: 1600px;
   background-repeat: no-repeat;
