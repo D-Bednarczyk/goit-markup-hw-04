@@ -98,7 +98,7 @@ header div > a {
 
 .contact-icons {
   margin-right: 10px;
-  fill: var(--brand-grey);
+  fill: currentColor;
   vertical-align: middle;
 }
 
@@ -106,12 +106,6 @@ header a:hover,
 header a:focus,
 .a-current {
   color: var(--brand-blue);
-  fill: var(--brand-blue);
-}
-
-header a:hover svg,
-header a:focus svg {
-  fill: var(--brand-blue);
 }
 
 header {
@@ -119,6 +113,7 @@ header {
   border-bottom-style: solid;
   border-bottom-color: var(--border-grey);
 }
+
 .margin-head-a {
   margin-right: 50px;
 }
@@ -134,10 +129,12 @@ header {
       var(--gradient-color)
     ),
     url(https://d-bednarczyk.github.io/goit-markup-hw-04/images/background.jpg);
-  background-position: 50% 40%;
-  background-size: 1600px;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: auto;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
 }
 
 .mainheader h1 {
@@ -164,6 +161,15 @@ header {
   color: var(--brand-white);
 }
 
+.container-icons {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .ourperks h3 {
   font-weight: 700;
   font-size: 14px;
@@ -175,9 +181,8 @@ header {
 .ourperks li {
   width: 270px;
 }
-.ourperks-icons {
-  padding: 25px;
 
+.ourperks-icons {
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -229,12 +234,10 @@ h2 {
 }
 
 .team-wrap {
-  padding: 30px;
-  padding-left: 32px;
-  padding-right: 30px;
+  padding: 30px 0;
 }
 
-.ourteam li {
+.ourteam-li {
   background-color: var(--brand-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -246,16 +249,30 @@ h2 {
   gap: 30px;
 }
 
-.customerlogo {
+.ourcustomers-a {
+  color: var(--customer-logo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
   border: 1px solid var(--customer-logo);
   border-radius: 4px;
-  fill: var(--customer-logo);
-  padding: 14px;
 }
 
-.customerlogo:hover {
-  fill: var(--brand-blue);
+.ourcustomers-a:hover,
+.ourcustomers-a:focus {
+  color: var(--brand-blue);
   border: 1px solid var(--brand-blue);
+}
+
+.customerlogo {
+  fill: currentColor;
+}
+
+.customerlogo:hover,
+.customerlogo:focus {
+  fill: currentColor;
 }
 
 .portfolio-buttons {
@@ -413,16 +430,26 @@ footer h4 {
   margin-top: 16px;
   display: flex;
   gap: 10px;
+  justify-content: center;
+  align-items: baseline;
+}
+.social-media-a {
+  display: flex;
+  color: var(--customer-logo);
 }
 
 .social-media-icon {
   background-color: var(--brand-white);
   border-radius: 50px;
-  fill: var(--customer-logo);
+  fill: currentColor;
 }
+/* .social-media-a:hover,
+.social-media-a:focus {
+  color: var(--brand-blue);
+} */
 
-.social-media a:hover .social-media-icon,
-.social-media a:focus .social-media-icon {
+.social-media-a:hover .social-media-icon,
+.social-media-a:focus .social-media-icon {
   background-color: var(--brand-blue);
   fill: var(--brand-white);
 }
